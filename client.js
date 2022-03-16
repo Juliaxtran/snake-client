@@ -9,16 +9,17 @@ const connect = function () {
   conn.on("connect", () => {
     console.log("Successfully connected to game server")
     conn.write("Name: JT");
+   
+
+
   }
   )
   conn.on("data", (data) => {
-    return console.log("Server outputs:", data);
+  console.log("Server outputs:", data);
   });
+ 
   return conn
 };
 
-
-console.log("Connecting ...");
-connect();
 
 module.exports = connect;
